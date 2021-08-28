@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+    <head>
+	   <meta charset="utf-8">
+	   <meta name="description" content="Fundada em 2004 a J. Coelho inspeções é uma empresa especializada em inspeção industrial com sede em Recife. Atendemos a clientes em Pernambuco e estados vizinhos.">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <title>J.Coelho Inspeções</title>
+	   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href="css/ihover.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+    	<nav id="header" class="navbar navbar-sec navbar-fixed-top">
+			<div id="header-container" class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a id="brand" class="navbar-brand" href="index.html">
+						<img src="img/logo-J.CoelhoInspeções.svg" alt="J. Coelho Inspeções">
+					</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav nav-justified menu-nav">
+						<li class="active">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="sobre.html">Quem somos</a>
+						</li>
+						<li>
+							<a href="servicos.html">Serviços</a>
+						</li>
+						<li>
+							<a href="contato.html">Contato</a>
+						</li>
+						<li>
+							<a href="trabalhe.html">Trabalhe conosco</a>
+						</li>
+						<hr>
+						<li>
+							<a href="#" class="tel">
+								<i class="fa fa-phone"></i>
+								(81) 3040-0066  |  (81) 99996-7577
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section class="row col-md-12 trabalhe">
+			<div class="container">
+				<h1 class="row col-md-4">
+					Trabalhe conosco
+					<span class="row"><img src="img/effect.png" alt=""></span>
+				</h1>
+
+				<p class="row col-md-12">Faça parte da equipe J.Coelho. Preencha o formulário abaixo e inclua seu currículo em nosso banco de dados.</p>
+
+				<form class="col-md-12" method="post" name="myemailform" action="form-to-trabalhe.php" enctype="multipart/form-data">
+					<div class="col-md-5 entrs">
+						<input class="col-md-4 entrada" type="text"  name="nome" required="required" placeholder="Nome Completo">
+						<input class="col-md-4 entrada" type="text" name="cpf" placeholder="CPF" required="required" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato nnn.nnn.nnn-nn">
+						<input type="email" class="col-md-4 entrada" name="email_from" required="required" maxlength="60" placeholder="E-mail">
+						<input  type="tel" class="col-md-4 entrada" name="tel" placeholder="Telefone" maxlength="16" pattern="(\d{2}\) \d{1}\ \d{4}-\d{4}" title="Digite o número no formato (nn) n nnnn-nnnn">
+						<div class="inputFile">
+							<span>Anexar Currículo</span>
+							<input class="row col-md-3 col-md-offset-7 botao" type="file" name="arquivo" value="Anexar Currículo">
+						</div>
+					</div>
+					<textarea class="col-md-7 mens" required="required" name="mensagem" placeholder="Mensagem"></textarea>
+					<input class="row col-md-3 col-md-offset-5 botao" type="submit" name='submit' value="Enviar" id = "button">
+				</form>
+			</div>
+		</section>
+
+		<section class="row col-md-12 news">
+			<div class="container">
+				<form action="form-to-news.php" method="post" name="EmailNewsltter">
+					<h1 class="col-md-2">Newsletter</h1>
+					<input class="col-md-4 newsletter" type="text"  name="name" id="name" placeholder="Nome">
+					<input class="col-md-4 newsletter" type="text"  name="email" id="e-mail" placeholder="Email">
+					<input class="col-md-2 botao" type="submit" name='submit' value="Assinar" id ="button">
+				</form>
+			</div>
+		</section>
+
+		<footer class="col-md-12">
+			<div class="container">
+				<p class="col-md-6">© 2015 J. Coelho Inspeções Industriais Recife / Pernambuco | Todos Direitos Reservados</p>
+				<div class="col-md-offset-3 col-md-3">
+					<img src="img/agencia-conteudo.png" alt="">					
+				</div>
+			</div>
+		</footer>
+	   
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			$("#arquivo").change(function() {
+    			$(this).prev().html($(this).val());
+			});
+		</script>
+		<script>
+		   function valida() {
+		      if (document.cadastro3.cpf.validity.patternMismatch) {
+		         alert("O CPF está incorreto");
+		      } else {
+		         alert("O CPF está correto");
+		      }
+		      return false;
+		   }
+		</script>
+		<script language="JavaScript">
+			var frmvalidator  = new Validator("myemailform");
+			frmvalidator.addValidation("name","req","Nome obrigatorio."); 
+			frmvalidator.addValidation("email","req","Email obrigatorio."); 
+			frmvalidator.addValidation("email","email","Por favor, informe um email valido."); 
+		</script>
+
+    </body>
+</html>

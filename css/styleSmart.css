@@ -1,0 +1,63 @@
+.navbar{
+	width: 102vw;
+}
+
+.header{
+	height: 780px;
+	width: 105vw;
+}
+
+.header-color{
+	height: 780px;
+}
+
+.header-color > .container > h1{
+	margin-top: 40vh;
+}
+
+.header-color > .container > p{
+	width: 86%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.header-color > .container > .botao{
+	left: -25px;
+}
+
+.servicos {
+    margin-top: 620px;
+}
+
+.servicos > .container > h1{
+	height: 100px
+}
+
+.sobre > .container{
+	margin: 0 15px;
+}
+
+.sobre > .container > h1{
+	margin-top: 50px;
+	width: 250px;
+}
+
+.sobre > .container > p {
+    text-align: center;
+}
+
+.sobre > .container > .botao{
+	margin-top: -20px;
+}
+
+.clientes > .container > ul {
+    margin-left: 10%;
+}
+
+.zoom > .container > .col-md-4 > .ih-item.circle {
+    margin: auto 15% 30px 15%;
+}
+
+.news > .container > form > .newsletter {
+    width: 310px;
+}
